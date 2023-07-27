@@ -1,0 +1,1 @@
+# fisierul dat este pentru cei de la static

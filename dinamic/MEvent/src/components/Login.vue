@@ -1,5 +1,5 @@
 <template>
-    <h2>hello</h2>
+    <div class="body">
     <header>
         <div class="box">
             <div class="container">
@@ -7,32 +7,48 @@
                     <span>Have an account?</span>
                     <header>Login</header>
                 </div>
-            </div>
-        </div>
-        <div class="input-field">
-            <input type="text" class="input" placeholder="   Email" required>
-            <i class="bx bx-user"></i>
-        </div>
-        <div class="input-field">
-            <input type="password" class="input" placeholder="   Password" required>
-            <div class="bottom">
-                <div class="left">
-                    <input type="checkbox" id="check">
-                    <label for="check">Remember me</label>
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="   Email" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="   Password" required>
+                    <div class="bottom">
+                        <div class="left">
+                            <input type="checkbox" id="check">
+                            <label for="check">Remember me</label>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <input type="submit" class="submit" value="Login">
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="register-link">
+                        <p>Don`t have an acount? <a class="button" href="register.html">Register</a></p>
+                    </div>
                 </div>
             </div>
-            <div class="input-field">
-                <input type="submit" class="submit" value="Login">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="register-link">
-                <p>Don`t have an acount? <a class="button" href="register.html">Register</a></p>
-            </div>
         </div>
+        
+
     </header>
+    </div>
 </template>
 
 <script>
+//trebuie buton login
+//linia 30 p trebuie sa faca link la 
+export default {
+    name: "Login",
+    data: function () {
+        return {
+            email: "",
+            password: "",
+        }
+    }
+
+}
+
 
 </script>
 
@@ -43,7 +59,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+.body {
     background: #80376A;
 }
 
@@ -140,7 +156,7 @@ i {
     font-size: 15px;
 
 }
-
-.button {
+.button{
     color: #CDA0BC;
-}</style>
+}
+</style>

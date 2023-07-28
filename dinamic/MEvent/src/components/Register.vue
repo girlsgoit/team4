@@ -1,11 +1,10 @@
 <template>
-    <header>
+    <div class="body">
+        <header>
         <div class="box">
             <div class="container">
                 <div class="top-header">
                     <header>Register</header>
-                </div>
-            </div>
         </div>
         <div class="input-field">
             <input type="text" class="input" placeholder="   Name" required>
@@ -20,17 +19,31 @@
                     <input type="checkbox" id="check">
                     <label for="check">Remember me</label>
                 </div>
-            </div>
         </div>
         <div class="input-field">
             <input type="submit" class="submit" value="Register">
             <i class="bx bx-lock-alt"></i>
         </div>
-
+    </div></div>
+</div>
     </header>
+    </div>
 </template>
 
 <script>
+//trebuie buton register
+    export default {
+        name: "Login",
+        data: function () {
+            return {
+                name: "",
+                surname: "",
+                email: "",
+                password: "",
+            }
+        }
+
+    }
 
 </script>
 
@@ -40,8 +53,7 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
-
-body {
+.body{
     background: #80376A;
 }
 
@@ -56,7 +68,7 @@ body {
     width: 350px;
     display: flex;
     flex-direction: column;
-    padding: o 15px 0 15px;
+    padding: 0 15px 0 15px;
 
 }
 

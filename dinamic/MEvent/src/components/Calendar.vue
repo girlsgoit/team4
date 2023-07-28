@@ -70,8 +70,7 @@
         name: "Calendar",
         data: function () {
             return {
-                month: "",
-                year: "",
+                selected: ""
             }
         }
         

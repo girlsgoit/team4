@@ -27,6 +27,17 @@
 </template>
 
 <script>
+    export default {
+        name: "TaskList",
+        data: function () {
+            return {
+                //date????
+                tasks: [{ id: 1  , title: 'event', date: "string date"}, 
+                { id: 2  , title: 'event', date: "string date"},
+                { id: 3  , title: 'event', date: "string date"},
+                { id: 4  , title: 'event', date: "string date"}
+            ]
+            }}}
 
 </script>
 

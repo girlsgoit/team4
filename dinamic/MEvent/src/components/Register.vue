@@ -31,6 +31,19 @@
 </template>
 
 <script>
+//trebuie buton register
+    export default {
+        name: "Login",
+        data: function () {
+            return {
+                name: "",
+                surname: "",
+                email: "",
+                password: "",
+            }
+        }
+
+    }
 
 </script>
 

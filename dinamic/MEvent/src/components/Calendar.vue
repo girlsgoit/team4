@@ -6,6 +6,16 @@
 
 
 <script>
+    export default {
+        name: "Calendar",
+        data: function () {
+            return {
+                month: "",
+                year: "",
+            }
+        }
+        
+    }
 
 </script>
 

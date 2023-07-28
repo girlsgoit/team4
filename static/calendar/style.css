@@ -5,17 +5,19 @@ body {
     padding: 0;
     height: 800px;
     width: 730px;
-    margin: 50px 500px 500px 50px;
+    margin: 200px 500px 0px 100px;
+    background-color: #D5DFEA;
 }
 
 
 .month {
     padding: 70px 25px;
-  background: #AB8271;
+  background: #bd85b2;
   text-align: center;
   position: relative;
   object-fit: cover;
   border-radius: 40px 40px 0px 0px;
+  margin: 0px 50px;
 }
 
 
@@ -48,6 +50,7 @@ body {
   margin: 0;
   padding: 10px 0;
   background-color:#ddd;
+  margin: 0px 50px 0px 50px;
 }
 
 .weekdays li {
@@ -62,8 +65,10 @@ body {
 .days {
   padding: 10px 0;
   background: #eee;
-  margin: 0;
+  background-size: cover;
+  margin: 0px 50px;
   border-radius: 0px 0px 40px 40px;
+  
 }
 
 .days li {
@@ -83,8 +88,12 @@ body {
   padding: 5px;
 }
 
+.days h4{
+    cursor: pointer;
+}
+
 .active {
-    margin: 10px 40px;
+    margin: 10px 33px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -97,7 +106,7 @@ body {
   float: left;
   background-color: transparent;
   color: white;
-  margin: -37px 200px;
+  margin: -13px 150px;
   font-size: 20px;
   cursor: pointer;
 }
@@ -112,8 +121,9 @@ body {
   float: left;
   background-color: transparent;
   color: white;
-  margin: -30px 260px;
+  margin: -30px 217px;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .next-item{
@@ -128,4 +138,12 @@ body {
 
 .grp-button{
     font-family: Display;
+}
+
+
+
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }

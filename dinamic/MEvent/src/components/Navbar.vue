@@ -1,15 +1,14 @@
 <template>
-    <header>
-        <h2>hello</h2>
+  <header>
         <img class="logo" src="../assets/logo.png" alt="MEvent | Savy entertaiment" />
       <nav>
         <ul class="nav_links">
-          <li><a href="index.html">My Tasks</a></li>
-          <li><a href="index.html">My Events</a></li>
+            <router-link to="/tasks"><li>My Task</li></router-link>
+            <router-link to="/my-events"><li>My Events</li></router-link>
         </ul>
       </nav>
       <a class="cta" href="#"><button>Log Out</button></a>
-    </header>
+    </header >
     <section>
       
     </section>
@@ -22,10 +21,15 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 li, a, button{
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 24px;
     color: #633567;
     text-decoration: none;}
 body{
@@ -34,6 +38,7 @@ body{
 a:hover{
     text-decoration: none;
 }
+
 header{
     position: flex;
     display: flex;
@@ -41,6 +46,7 @@ header{
     justify-content: space-between;
     padding: 10px 25px;
     background: #efd7f1;
+    height: 90px;
 }
 header ul{
     list-style: none;
@@ -59,7 +65,7 @@ header a:hover{
 .logo {
     cursor: pointer;
     margin-right:auto;
-    height: 175px;
+    height: 92px;
     width: auto;
     margin-left: 100px;
 }
@@ -70,6 +76,7 @@ header a:hover{
 .nav_links li a{
     transition: all 0.3s ease 0s;
     margin-right: 10px;
+  
 }
 .nav_links li a :hover{
   color: rgb(143, 98, 183);}

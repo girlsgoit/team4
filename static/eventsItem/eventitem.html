@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+        <meta name="viewpoint" content="width-device-width, initiak-scale=1.0"/>
+        <title>MEvent | My events</title>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="eventitem.css"/>
+
+        <!--Unicons CSS-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"/>
+    </head>
+    <body>
+       <div class="container">
+        <div class="input-field">
+            <textarea placeholder="Enter your new event"></textarea>
+        </div>
+
+        <ul class="block">
+            <div class="input-field">
+                <li class="field">
+                    <input type="Location" class="input" placeholder="   Enter location" required>
+                    <i class="uil uil-times"></i>
+                    <label for="start"></label>
+
+       <input type="date" id="start" name="trip-start"
+       value="2023-01-01"
+       min="2023-01-01" max="2024-12-31">
+        
+                </li>
+        </ul>
+        
+        <div class="pending-events">
+            <span>You have <span>no </span>events pending.</span>
+            <button class="clear-button">Clear All</button>
+        </div>
+       </div>
+    </body>
+</html>

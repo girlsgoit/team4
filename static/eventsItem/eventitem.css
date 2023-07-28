@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Montserrat&family=Poppins:wght@300;400;600&display=swap');
+
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.body{
+    background-color: rgb(255, 255, 255);
+}
+.container {
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 85px auto 0;
+    background-color: rgb(228, 188, 224);
+    box-shadow: 0px 5px 10px rgba(218, 151, 151, 0.1);
+}
+.container .input-field{
+    position: relative;
+    height: 64px;
+    width: 100%;
+}
+.input-field textarea{
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+    border-radius: 8px;
+    padding: 18px 45px 18px 15px;
+    border: 1px solid #ffffff;
+    resize: none;
+}
+.input-field textarea:focus ~.note-icon{
+    color: beige;}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+.input-field .note-icon{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 24px;
+    color: rgb(91, 33, 87);
+    cursor: default;
+}
+.container .input-field{
+    margin-top: 20px;
+   cursor: default;
+}
+.input-field .field{
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(187, 135, 178);
+    padding: 20px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: default;
+}
+.date{
+    position: absolute;
+    margin: 0px 30px 0px 0px;
+    padding: 20px 15px;
+    border-radius: 8px;
+    margin-top: 0px;
+    margin-left: 225px;
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(70, 56, 69);
+}
+.ToDoList .List input{
+    height: 16px;
+    min-width: 16px;
+    accent-color: #bdb6b6;
+    pointer-events: none;
+}
+.ToDoList .List .events{
+    margin: 0px 30px 0px 15px;
+    word-break: break-all;
+}
+.List input:checked~.task{
+    text-decoration: line-through;
+}
+.container .input-field i{
+    
+    display: none;
+    height: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    color: #CDA0BC;
+    padding: o o o 10px;
+    background: rgba(255, 255, 255, 0.1)
+}
+.container .List:hover i{
+    display: inline-flex;
+}
+.container .List i:hover{
+    opacity: 1;
+}
+.container .pending-events{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.pending-events span{
+    padding: 10px 0 0 0 ;
+    color: #5a4b5a;
+}
+.pending-events .clear-button{
+    padding: 6px 20px;
+    outline: none;
+    border: none;
+    background: honeydew;
+    color:rgb(98, 27, 100);
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: 0.4rem 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 15px;
+    
+}
+
+.clear-button:hover{
+    background-color: rgb(136, 122, 136);
+}

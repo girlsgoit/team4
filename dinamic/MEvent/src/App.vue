@@ -1,7 +1,14 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from 'vue-router'
 import Navbar from "./components/Navbar.vue"
 
+export default {
+    name: "LoginView",
+    components: {
+        Navbar
+    }
+
+}
 </script>
 
 <template>
@@ -11,7 +18,7 @@ import Navbar from "./components/Navbar.vue"
   <RouterView />
 </template>
 
-<style>
+<style >
 *{
     margin: 0;
     padding: 0;

@@ -3,7 +3,13 @@
 </template>
 
 <script>
-
+    export default {
+        name: "MyEventsItem",
+        data: function () {
+            return {
+                titlu: "",
+                data: "",
+            }}}
 </script>
 
 <style scoped>

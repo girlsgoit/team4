@@ -6,9 +6,19 @@
 
 
 <script>
-
+export default {
+    name: "MyEventsItem",
+    data: function () {
+        return {
+            //data, ora???
+            events: [
+                { id: 1, title: 'event', location: "Chisinau", date: "date sample", time: "time" },
+                { id: 2, title: 'event', location: "Chisinau",date: "date sample", time: "time"  },
+                { id: 3, title: 'event', location: "Chisinau",date: "date sample", time: "time"  }
+            ,  { id: 4, title: 'event', location: "Chisinau",date: "date sample", time: "time"  }]
+        }
+    }
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

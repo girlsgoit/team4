@@ -1,19 +1,18 @@
 <template>
   <header>
-        <img class="logo" src="../assets/logo.png" alt="MEvent | Savy entertaiment" />
+        <img class="logo" src="../assets/logo.png" alt="MEvent | SAVY entertaiment" />
       <nav>
         <ul class="nav_links">
-            <router-link to="/tasks"><li>My Task</li></router-link>
-            <router-link to="/my-events"><li>My Events</li></router-link>
+            <router-link to="/tasks"><li class="color">My Task</li></router-link>
+            <router-link to="/my-events"><li class="color">My Events</li></router-link>
         </ul>
       </nav>
       <a class="cta" href="#"><button>Log Out</button></a>
     </header >
     <section>
-      
+
     </section>
 </template>
-
 
 <script>
 
@@ -21,12 +20,13 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-li, a, button{
+li, .color, button{
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 24px;
@@ -35,11 +35,19 @@ li, a, button{
 body{
     font-family: 'Courier New', Courier, monospace;
 }
-a:hover{
+.color:hover{
     text-decoration: none;
 }
 
-header{
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+header {
     position: flex;
     display: flex;
     align-items: center;
@@ -48,37 +56,41 @@ header{
     background: #efd7f1;
     height: 90px;
 }
-header ul{
+
+header ul {
     list-style: none;
     display: flex;
 }
-header li{
+
+header li {
     margin: 0px 5px;
     list-style: none;
 }
-header a{
+header .color{
     color:rgb(79, 37, 79);
 }
-header a:hover{
+header .color:hover{
     color: rgb(146, 110, 179);
 }
+
 .logo {
     cursor: pointer;
-    margin-right:auto;
+    margin-right: auto;
     height: 92px;
     width: auto;
     margin-left: 100px;
 }
-.nav_links li{
+
+.nav_links li {
     display: inline-block;
     padding: 0px 20px;
 }
-.nav_links li a{
+.nav_links li .color{
     transition: all 0.3s ease 0s;
     margin-right: 10px;
-  
+
 }
-.nav_links li a :hover{
+.nav_links li .color :hover{
   color: rgb(143, 98, 183);}
 button{
     padding: 9px 25px;
@@ -89,7 +101,7 @@ button{
     transition: all 0.3s ease 0s;
     margin-right: 20px;
 }
-button :hover{
+
+button :hover {
     background-color: rgba(189, 150, 190, 0.6);
-}
-</style>
+}</style>

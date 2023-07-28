@@ -8,38 +8,21 @@
 .body{
     background-color: rgb(255, 255, 255);
 }
-
-ul{
-    margin:0;
-}
 .container {
     position: relative;
     max-width: 480px;
     width: 100%;
     border-radius: 8px;
     padding: 25px;
-    margin: -400px 50px 0px 940px;
-    background-color: #bd85b2;
-    box-shadow: 0px 5px 10px #bd85b2;
+    margin: 85px auto 0;
+    background-color: rgb(228, 188, 224);
+    box-shadow: 0px 5px 10px rgba(218, 151, 151, 0.1);
 }
 .container .input-field{
     position: relative;
-    height: 60px;
+    height: 64px;
     width: 100%;
-
 }
-label {
-   margin: 0.4rem 0;
-    display: inline-flex;
-    font: 1rem 'Fira Sans', sans-serif;
-    color: #5a4b5a;
-
-}
-
-input,label {
-    margin: 0.4rem 0;
-}
-
 .input-field textarea{
     height: 100%;
     width: 100%;
@@ -52,44 +35,35 @@ input,label {
     resize: none;
 }
 .input-field textarea:focus ~.note-icon{
-    color: rgb(255, 255, 255);}
+    color: beige;}
 
 textarea::-webkit-scrollbar {
     display: none;
 }
 .input-field .note-icon{
     position: absolute;
-    top: 15%;
-    right: 30px;
+    top: 50%;
+    right: 15px;
     transform: translateY(-50%);
     pointer-events: none;
     font-size: 24px;
-    color: #4d4d4d;
+    color: rgb(91, 33, 87);
+    cursor: default;
 }
-.ToDoList .List{
+.container .input-field{
+    margin-top: 20px;
+   cursor: default;
+}
+.input-field .field{
     position: relative;
     display: flex;
     align-items: center;
     list-style: none;
-    background-color: #D5DFEA;
+    background-color: rgb(187, 135, 178);
     padding: 20px 15px;
     border-radius: 8px;
     margin-top: 10px;
     cursor: default;
-}
-.clear-button2 {
-    padding: 6px 12px;
-    outline: none;
-    border: none;
-    background: honeydew;
-    color:rgb(98, 27, 100);
-    font-size: 15px;
-    border-radius: 2px;
-    cursor: pointer;
-    margin-top: 5px;  
-}
-.clear-button2:hover{
-    background-color: rgb(182, 161, 182);
 }
 .date{
     position: absolute;
@@ -100,64 +74,74 @@ textarea::-webkit-scrollbar {
     margin-left: 225px;
     background-color: transparent;
     border-color: transparent;
-    color: #4e4d4d;
+    color: rgb(70, 56, 69);
 }
 .ToDoList .List input{
     height: 16px;
     min-width: 16px;
-    accent-color: #5a5a5a;
-    pointer-events: visible;
+    accent-color: #bdb6b6;
+    pointer-events: none;
 }
-.ToDoList .List .task{
+.ToDoList .List .events{
     margin: 0px 30px 0px 15px;
     word-break: break-all;
 }
 .List input:checked~.task{
     text-decoration: line-through;
 }
-.ToDoList .List i{
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    font-size: 20px;
-    padding: 5px;
-    color: rgb(58, 58, 59);
-    padding: 5px;
-    opacity: 0.6;
+.container .input-field i{
+    
     display: none;
+    height: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    color: #CDA0BC;
+    padding: o o o 10px;
+    background: rgba(255, 255, 255, 0.1)
 }
-.ToDoList .List:hover i{
+.container .List:hover i{
     display: inline-flex;
 }
-.ToDoList .List i:hover{
+.container .List i:hover{
     opacity: 1;
 }
-.container .pending-tasks{
+.container .pending-events{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 25px;
 }
-.pending-tasks span{
-    color: #555455;
+.pending-events span{
+    padding: 10px 0 0 0 ;
+    color: #5a4b5a;
 }
-.pending-tasks .clear-button{
-    padding: 6px 12px;
+.pending-events .clear-button{
+    padding: 6px 20px;
     outline: none;
     border: none;
-    background: rgb(254, 254, 254);
-    color:rgb(65, 65, 65);
+    background: honeydew;
+    color:rgb(98, 27, 100);
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
 }
-.clear-button:hover{
-    background-color: #ffc7f98e;
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
 }
 
-#create-todo{
-    display: flex;
-    justify-content: space-between;
+input,
+label {
+    margin: 0.4rem 0;
+    display: inline-flex;
     align-items: center;
+    justify-content: space-between;
+    margin: 5px 15px;
+    
+}
+
+.clear-button:hover{
+    background-color: rgb(136, 122, 136);
 }

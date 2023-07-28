@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Display&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&display=swap">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"/>
+</head>
+<body>
+    <div class="month">
+  <ul class="group-button">
+    <br>
+    <li class="m-month"> <h2>August</h2> </li>
+    <li class="prev"><button type="button" class="m-button"><span> &#10094;</span></button></li>
+    <li class="next"><button type="button" class="m-button"><span> &#10095;</span></button></li>
+    
+  </ul>
+
+  <ul class="grp-button">
+    <br>
+    <li><span style="font-size:18px">2023</span></li>
+    <li class="prev"><button type="button" class="mobile-button"> &#10094;</button></li>
+    <li class="next-item"><button type="button" class="mobile-button">&#10095;</button></li>
+    <br>
+    
+    
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li><span class="active">Mo</span></li>
+  <li><span class="active">Tu</span></li>
+  <li><span class="active">We</span></li>
+  <li><span class="active">Th</span></li>
+  <li><span class="active">Fr</span></li>
+  <li><span class="active">Sa</span></li>
+  <li><span class="active">Su</span></li>
+</ul>
+
+<ul class="days">
+    <li><span class="active"></span></li>
+  <li><span class="active">1</span></li>
+  <li><span class="active">2</span></li>
+  <li><span class="active">3</span></li>
+  <li><span class="active">4</span></li>
+  <li><span class="active">5</span></li>
+  <li><span class="active">6</span></li>
+  <li><span class="active">7</span></li>
+  <li><span class="active">8</span></li>
+  <li><span class="active">9</span></li>
+  <li><span class="active">10</span></li>
+  <li><span class="active">11</span></li>
+  <li><span class="active">12</span></li>
+  <li><span class="active">13</span></li>
+  <li><span class="active">14</span></li>
+  <li><span class="active">15</span></li>
+  <li><span class="active">16</span></li>
+  <li><span class="active">17</span></li>
+  <li><span class="active">18</span></li>
+  <li><span class="active">19</span></li>
+  <li><span class="active">20</span></li>
+  <li><span class="active">21</span></li>
+  <li><span class="active">22</span></li>
+  <li><span class="active">23</span></li>
+  <li><span class="active">24</span></li>
+  <li><span class="active">25</span></li>
+  <li><span class="active">26</span></li>
+  <li><span class="active">27</span></li>
+  <li><span class="active">28</span></li>
+  <li><span class="active">29</span></li>
+  <li><span class="active">30</span></li>
+  <li><span class="active">31</span></li>
+</ul>
+
+<div class="container">
+    <div class="input-field">
+        <textarea placeholder="Enter your new task"></textarea>
+        <i class="uil uil-notes note-icon"></i>
+    </div>
+    <ul class="ToDoList">
+        <li class="List">
+            <input type="checkbox"/>
+            <span class="task">Play</span>
+            <i class="uil uil-times"></i>
+            <input type="date" class="date">
+
+        </li>
+        <li class="List">
+            <input type="checkbox"/>
+            <span class="task">Work</span>
+            <i class="uil uil-times"></i>
+            <input type="date" class="date">
+        </li>
+    </ul>
+    <div class="pending-tasks">
+        <span>You have <span>no </span>tasks pending.</span>
+        <button class="clear-button">Clear All</button>
+    </div>
+   </div>
+
+</body>
+</html>

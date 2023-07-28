@@ -1,5 +1,6 @@
 <template>
     <header>
+        <h2>hello</h2>
         <img class="logo" src="../assets/logo.png" alt="MEvent | Savy entertaiment" />
       <nav>
         <ul class="nav_links">

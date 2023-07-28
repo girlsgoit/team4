@@ -5,19 +5,21 @@
             <i class="uil uil-notes note-icon"></i>
         </div>
         <ul class="ToDoList">
-            <li class="List">
+            <!-- v-for -->
+            <li class="List" v-for="item in items">
+                {{ this.item }}
                 <input type="checkbox" />
                 <span class="task">Play</span>
                 <i class="uil uil-times"></i>
                 <input type="date" class="date">
 
             </li>
-            <li class="List">
+            <!-- <li class="List">
                 <input type="checkbox" />
                 <span class="task">Work</span>
                 <i class="uil uil-times"></i>
                 <input type="date" class="date">
-            </li>
+            </li> -->
         </ul>
         <div class="pending-tasks">
             <span>You have <span>no </span>tasks pending.</span>
@@ -31,7 +33,6 @@
         name: "TaskList",
         data: function () {
             return {
-                //date????
                 tasks: [{ id: 1  , title: 'event', date: "string date"}, 
                 { id: 2  , title: 'event', date: "string date"},
                 { id: 3  , title: 'event', date: "string date"},

@@ -1,5 +1,6 @@
 <template>
-    <h2>hello</h2>
+    {{ this.title }} 
+    {{ this.data }}
 </template>
 
 <script>
@@ -9,7 +10,13 @@
             return {
                 titlu: "",
                 data: "",
-            }}}
+            }},
+        props: {
+            title: "",
+            data: "",
+        }
+        }
+        
 </script>
 
 <style scoped>

@@ -1,11 +1,13 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 import Navbar from "./components/Navbar.vue"
+import Calendar from "./components/Calendar.vue"
 
 export default {
     name: "LoginView",
     components: {
-        Navbar
+        Navbar,
+        Calendar
     }
 
 }
@@ -13,6 +15,7 @@ export default {
 
 <template>
   <Navbar/>
+  <Calendar/>
 
 
   <RouterView />

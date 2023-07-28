@@ -156,8 +156,7 @@ i {
     font-size: 15px;
 
 }
-
-.button {
+.button{
     color: #CDA0BC;
 }
 </style>

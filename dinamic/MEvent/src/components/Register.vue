@@ -10,18 +10,18 @@
             <input type="text" class="input" placeholder="   Name" required>
             <input type="text" class="input" placeholder="   Surname" required>
             <input type="text" class="input" placeholder="   Email" required>
- <i class="bx bx-user"></i>
+            <i class="bx bx-user"></i>
         </div>
         <div class="input-field">
             <input type="password" class="input" placeholder="   Password" required>
             <div class="bottom">
                 <div class="left">
-                <input type="checkbox" id="check">
-                <label for="check">Remember me</label>
+                    <input type="checkbox" id="check">
+                    <label for="check">Remember me</label>
                 </div>
         </div>
         <div class="input-field">
-            <input type="submit" class="submit"  value="Register">
+            <input type="submit" class="submit" value="Register">
             <i class="bx bx-lock-alt"></i>
         </div>
     </div></div>
@@ -48,34 +48,39 @@
 </script>
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Poppins:wght@300&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Poppins:wght@300&display=swap');
+
+* {
     font-family: 'Poppins', sans-serif;
 }
 .body{
     background: #80376A;
 }
-.box{
+
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 90vh;
 }
-.container{
+
+.container {
     width: 350px;
     display: flex;
     flex-direction: column;
     padding: 0 15px 0 15px;
 
 }
-span{
+
+span {
     color: #CDA0BC;
     font-size: large;
     display: flex;
     justify-content: center;
     padding: 10px 0 10px 0;
 }
-header{
+
+header {
     color: #CDA0BC;
     font-size: 35px;
     display: flex;
@@ -83,15 +88,17 @@ header{
     padding: 10px 0 10px 0;
 
 }
-.bottom{
-   display: flex; 
-   flex-direction: column;
-   color: #CDA0BC;
-   padding: 10px 10px 20px 0;
-   font-size: 15px;
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    color: #CDA0BC;
+    padding: 10px 10px 20px 0;
+    font-size: 15px;
 
 }
-.input{
+
+.input {
     height: 30px;
     width: 100%;
     border: none;
@@ -101,25 +108,28 @@ header{
     padding: o o o 10px;
     background: rgba(255, 255, 255, 0.1)
 }
-i{
+
+i {
     position: relative;
     left: 12px;
     color: #CDA0BC;
 
 }
 
-.bottom{
+.bottom {
     display: block;
     justify-content: center;
     align-items: center;
     color: #CDA0BC;
-   
+
 }
-::-webkit-input-placeholder{
+
+::-webkit-input-placeholder {
     color: #CDA0BC;
 
 }
-.submit{
+
+.submit {
     border: none;
     border-radius: 30px;
     font-size: 15px;
@@ -127,11 +137,12 @@ i{
     outline: none;
     width: 100%;
     background: #CDA0BC;
-    cursor:pointer ;
+    cursor: pointer;
     transition: .6s;
 
 }
-.register-link{
+
+.register-link {
     display: block;
     justify-content: center;
     align-items: center;
@@ -139,9 +150,7 @@ i{
     font-size: 15px;
 
 }
-.button{
+
+.button {
     color: #CDA0BC;
-}
-
-
-</style>
+}</style>

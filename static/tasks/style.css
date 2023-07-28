@@ -8,6 +8,10 @@
 .body{
     background-color: rgb(255, 255, 255);
 }
+
+ul{
+    margin:0;
+}
 .container {
     position: relative;
     max-width: 480px;
@@ -19,10 +23,23 @@
     box-shadow: 0px 5px 10px rgba(218, 151, 151, 0.1);
 }
 .container .input-field{
-    position: relative;
+    position: flex;
     height: 64px;
     width: 100%;
+
 }
+label {
+   margin: 0.4rem 0;
+    display: inline-flex;
+    font: 1rem 'Fira Sans', sans-serif;
+    color: #5a4b5a;
+
+}
+
+input,label {
+    margin: 0.4rem 0;
+}
+
 .input-field textarea{
     height: 100%;
     width: 100%;
@@ -42,15 +59,12 @@ textarea::-webkit-scrollbar {
 }
 .input-field .note-icon{
     position: absolute;
-    top: 50%;
-    right: 15px;
+    top: 15%;
+    right: 30px;
     transform: translateY(-50%);
     pointer-events: none;
     font-size: 24px;
     color: rgb(91, 33, 87);
-}
-.container .ToDoList{
-    margin-top: 20px;
 }
 .ToDoList .List{
     position: relative;
@@ -61,7 +75,21 @@ textarea::-webkit-scrollbar {
     padding: 20px 15px;
     border-radius: 8px;
     margin-top: 10px;
+    cursor: default;
+}
+.clear-button2 {
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    background: honeydew;
+    color:rgb(98, 27, 100);
+    font-size: 15px;
+    border-radius: 2px;
     cursor: pointer;
+    margin-top: 5px;  
+}
+.clear-button2:hover{
+    background-color: rgb(182, 161, 182);
 }
 .date{
     position: absolute;
@@ -77,8 +105,9 @@ textarea::-webkit-scrollbar {
 .ToDoList .List input{
     height: 16px;
     min-width: 16px;
-    accent-color: #bdb6b6;
-    pointer-events: none;
+    accent-color: #d9b8d4;
+    pointer-events: visible;
+    cursor: pointer;
 }
 .ToDoList .List .task{
     margin: 0px 30px 0px 15px;
@@ -125,5 +154,11 @@ textarea::-webkit-scrollbar {
     cursor: pointer;
 }
 .clear-button:hover{
-    background-color: rgb(136, 122, 136);
+    background-color: rgb(182, 161, 182);
+}
+
+#create-todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

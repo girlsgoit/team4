@@ -1,6 +1,5 @@
 <template>
-    {{ this.title }} 
-    {{ this.data }}
+
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TaskList/>
+        <Calendar/>
 
     </div>
 
@@ -8,11 +8,11 @@
 
 
 <script>
-    import TaskList from '../components/TaskList.vue';
+    import Calendar from '../components/Calendar.vue';
     export default {
-        name: "TasksView",
+        name: "Calendar",
         components: {
-            TaskList
+            Calendar
         }}
 </script>
 

@@ -66,7 +66,7 @@
         </ul>
         </div>
 
-       <div class="container">
+       <!-- <div class="container">
         <div class="input-field">
             <textarea placeholder="Enter your new task"></textarea>
             <i class="uil uil-notes note-icon"></i>
@@ -90,7 +90,7 @@
             <span>You have <span>no </span>tasks pending.</span>
             <button class="clear-button">Clear All</button>
         </div>
-       </div>
+       </div> -->
 </template>
 
 

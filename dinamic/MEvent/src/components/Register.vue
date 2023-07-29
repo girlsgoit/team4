@@ -24,7 +24,7 @@
                             <!-- <button @click="register_b">Register -->
                             <input type="submit" class="submit" value="Register">
                             <i class="bx bx-lock-alt"></i>
-                        <!-- </button> -->
+                            <!-- </button> -->
                         </div>
                     </div>
                 </div>
@@ -35,6 +35,7 @@
 
 <script>
 //trebuie buton register
+// import axios from 'axios';
 export default {
     name: "Login",
     data: function () {
@@ -47,9 +48,9 @@ export default {
     },
     methods: {
         register_b: function () {
-            
+
         }
-    }
+    },
 
 }
 
@@ -162,4 +163,5 @@ i {
 
 .button {
     color: #CDA0BC;
-}</style>
+}
+</style>

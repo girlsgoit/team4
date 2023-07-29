@@ -1,13 +1,13 @@
 <template>
   <header>
-        <img class="logo" src="../assets/logo.png" alt="MEvent | SAVY entertaiment" />
+    <router-link to="/" class="image"><img class="logo" src="../assets/logo.png" alt="MEvent | SAVY entertaiment" /></router-link>
       <nav>
         <ul class="nav_links">
-            <router-link to="/tasks"><li class="color">My Task</li></router-link>
+            <router-link to="/tasks"><li class="color">My tasks</li></router-link>
             <router-link to="/my-events"><li class="color">My Events</li></router-link>
         </ul>
       </nav>
-      <a class="cta" href="#"><button>Log Out</button></a>
+      <a class="cta" href="#"><router-link to="/login"><button>Log Out</button></router-link></a>
     </header >
     <section>
 
@@ -73,7 +73,7 @@ header .color:hover{
     color: rgb(146, 110, 179);
 }
 
-.logo {
+.logo, .image {
     cursor: pointer;
     margin-right: auto;
     height: 92px;

@@ -20,11 +20,11 @@
                         </div>
                     </div>
                     <div class="input-field">
-                        <input type="submit" class="submit" value="Login">
+                        <router-link to="/"><input type="submit" class="submit" value="Login"></router-link>
                         <i class="bx bx-lock-alt"></i>
                     </div>
                     <div class="register-link">
-                        <p>Don`t have an acount? <a class="button" href="register.html">Register</a></p>
+                        <p>Don`t have an acount? <a class="button" href="register.html"><router-link to="/register">Register</router-link></a></p>
                     </div>
                 </div>
             </div>
@@ -56,8 +56,12 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Poppins:wght@300&display=swap');
 
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 
 .body {
     background: #80376A;

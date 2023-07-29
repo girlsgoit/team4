@@ -222,6 +222,10 @@ body {
     cursor: pointer;
 }
 
+.days li:hover{
+    background-color: #bd85b2;
+}
+
 .active {
     margin: 10px 33px;
     display: grid;

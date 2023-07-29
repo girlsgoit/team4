@@ -192,7 +192,7 @@ ul {
     width: 100%;
     border-radius: 8px;
     padding: 25px;
-    margin: -500px 50px 0px 840px;
+    margin: -600px 50px 0px 840px;
     background-color: #bd85b2;
     box-shadow: 0px 5px 10px #bd85b2;
 }

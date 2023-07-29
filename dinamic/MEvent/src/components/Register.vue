@@ -48,7 +48,7 @@ export default {
     methods: {
         register_b: function () {
             console.log(this.name, this.surname, this.password,this.email)
-            axios.post('server', name).then(response => {
+                axios.post('server', name).then(response => {
                     
                     this.name()
                 }).catch(error => {

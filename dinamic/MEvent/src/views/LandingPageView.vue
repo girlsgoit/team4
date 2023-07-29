@@ -150,6 +150,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Montserrat&family=Poppins:wght@300;400;600&family=Satisfy&display=swap');
+
 
 ul {
     list-style-type: none;

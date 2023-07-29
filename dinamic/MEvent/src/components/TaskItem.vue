@@ -10,16 +10,11 @@
 <script>
 export default {
     name: "MyEventsItem",
-    data: function () {
-        return {
-         
-        }
-    },
     props: {
         id:"",
         title: "",
         data: "",
-        completed: true
+        completed: Boolean
     }
 }
 

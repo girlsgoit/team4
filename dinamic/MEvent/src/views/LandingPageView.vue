@@ -1,5 +1,5 @@
 <template>
-    <!-- <Calendar/> -->
+    <Calendar/>
         <div class="titleContainer">
             <!-- <ul >
                 <li> -->

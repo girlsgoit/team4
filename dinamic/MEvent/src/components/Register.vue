@@ -47,6 +47,34 @@ export default {
     methods: {
         register_b: function () {
             console.log(this.name, this.surname, this.password,this.email)
+            axios.post('server', name).then(response => {
+                    
+                    this.name()
+                }).catch(error => {
+                    console.log(error.message)
+                })
+
+                axios.post('server', surname).then(response => {
+                    
+                    this.name()
+                }).catch(error => {
+                    console.log(error.message)
+                })
+
+                axios.post('server', email).then(response => {
+                    
+                    this.email()
+                }).catch(error => {
+                    console.log(error.message)
+                })
+
+                axios.post('server', this.password).then(response => {
+
+                    this.password()
+                }).catch(error => {
+                    console.log(error.message)
+                })
+
         }
     },
 

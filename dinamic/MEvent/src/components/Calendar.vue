@@ -91,13 +91,13 @@
 }
 
 ul {list-style-type: none;}
-.body {
+body {
     font-family: Verdana, sans-serif;
     margin: 0;
     padding: 0;
     height: 800px;
     width: 730px;
-    margin: 100px 400px 0px 0px;
+    margin: 200px 500px 0px 100px;
     background-color: #D5DFEA;
 }
 
@@ -232,10 +232,16 @@ ul {list-style-type: none;}
     font-family: Display;
 }
 
-
-
 *{  margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+*{  margin: auto;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -246,30 +252,29 @@ ul {list-style-type: none;}
     position: relative;
     max-width: 480px;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 0px;
     padding: 25px;
-    margin: -500px 50px 0px 840px;
-    background-color: #bd85b2;
-    box-shadow: 0px 5px 10px #bd85b2;
+    margin: 85px auto 0;
+    background-color: rgb(228, 188, 224);
+    box-shadow: 0px 5px 10px rgba(218, 151, 151, 0.1);
+   margin-top: -430px;
+   margin-right: -650px;
 }
 .container .input-field{
     position: relative;
-    height: 60px;
     width: 100%;
 }
 .input-field textarea{
-    height: 100%;
-    width: 100%;
-    font-size: 18px;
+    height: 70%;
+    width: 98%;
     font-weight: 400;
     outline: none;
-    border-radius: 8px;
-    padding: 18px 45px 18px 15px;
-    border: 1px solid #ffffff;
+    border-radius: 0;
+    border: 1px solid rgb(91, 33, 87);
     resize: none;
 }
 .input-field textarea:focus ~.note-icon{
-    color: rgb(255, 255, 255);}
+    color: beige;}
 
 textarea::-webkit-scrollbar {
     display: none;
@@ -281,89 +286,166 @@ textarea::-webkit-scrollbar {
     transform: translateY(-50%);
     pointer-events: none;
     font-size: 24px;
-    color: #4d4d4d;
+    color: rgb(91, 33, 87);
+    cursor: default;
 }
-.container .ToDoList{
-    margin-top: 20px;
+.container .input-field{
+   cursor: default;
 }
-.ToDoList .List{
+.input-field .field{
     position: relative;
     display: flex;
     align-items: center;
     list-style: none;
-    background-color: #D5DFEA;
+    background-color: rgb(187, 135, 178);
     padding: 20px 15px;
-    border-radius: 8px;
+    border-radius: 0px;
     margin-top: 10px;
-    cursor: pointer;
+    cursor: default;
 }
 .date{
     position: absolute;
     margin: 0px 30px 0px 0px;
     padding: 20px 15px;
-    border-radius: 8px;
+    border-radius: none;
     margin-top: 0px;
     margin-left: 225px;
     background-color: transparent;
     border-color: transparent;
-    color: #4e4d4d;
+    color: rgb(70, 56, 69);
 }
 .ToDoList .List input{
     height: 16px;
     min-width: 16px;
-    accent-color: #5a5a5a;
-    pointer-events: visible;
+    accent-color: #d483d1;
+    pointer-events: none;
 }
-.ToDoList .List .task{
+.ToDoList .List .events{
     margin: 0px 30px 0px 15px;
     word-break: break-all;
 }
 .List input:checked~.task{
     text-decoration: line-through;
 }
-.ToDoList .List i{
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    font-size: 20px;
-    padding: 5px;
-    color: rgb(58, 58, 59);
-    padding: 5px;
-    opacity: 0.6;
+.container .input-field i{
+    
     display: none;
+    height: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    color: #ed72be;
+    padding: o o o 10px;
 }
-
-
-
-.ToDoList .List:hover i{
+.container .List:hover i{
     display: inline-flex;
 }
-.ToDoList .List i:hover{
+.container .List i:hover{
     opacity: 1;
 }
-.container .pending-tasks{
+.container .pending-events{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 25px;
+    padding: 0 0 0 10px;
 }
-.pending-tasks span{
-    color: #555455;
-    
+.pending-events span{
+    padding: 2px 0 25px ;
+    color: #5a4b5a;
 }
-.pending-tasks .clear-button{
-    padding: 6px 12px;
+.pending-events .clear-button{
+    padding: 6px 10px;
     outline: none;
     border: none;
-    background: rgb(254, 254, 254);
-    color:rgb(65, 65, 65);
+    color:rgb(98, 27, 100);
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
 }
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    /* margin: 0.4rem 0; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border-color: transparent;
+    
+}
+input, ::placeholder{
+    background-color: transparent;
+}
+
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 92%;
+    background: #CDA0BC;
+    cursor:pointer ;
+    display: flex;
+    justify-content: center;
+}
+.form{
+    padding: 4px 0 0 0 ;
+    margin: 0.4rem 0;
+    outline: none;
+    width: 90%;
+    border: none;
+    background: honeydew;
+    color:rgb(98, 27, 100);
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 45px;
+    
+    
+}
 .clear-button:hover{
-    background-color: #ffc7f98e;
+    background-color: rgb(136, 122, 136);
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(187, 135, 178);
+    padding: 20px 15px;
+    border-radius: 0px;
+    margin-top: 10px;
+    cursor: default;
+}
+.input{
+    color: #5a4b5a;
+    display: inline;
+}
+.text{
+    color: #5a4b5a;
+    height: 20px;
+}
+.block{
+    width:100%;
+}
+
+.block, .input-block{
+    border-radius: 5px;
+    padding: 5px 10px;
+    
+
+}
+hr{
+    color: black;
+}
+.input-block{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5px;
 }
 
 </style>

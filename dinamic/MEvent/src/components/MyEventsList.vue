@@ -48,11 +48,9 @@
             <i class="bx bx-lock"></i>
         </div>
 
-<ul class="ToDoList" v-for="event in events">
+<!-- <ul class="ToDoList" v-for="event in events">
 <MyEventsItem :title="event.title" :id="event.id" :date="event.date" :hour="event.hour" :location="event.location"/>
- </ul>
-
-
+ </ul> -->
 
     </div>
 </template>
@@ -67,8 +65,8 @@ export default {
             events: [
                 { id: 1, title: 'event', location: "Chisinau", date: "date sample", time: "time" },
                 { id: 2, title: 'event', location: "Chisinau", date: "date sample", time: "time" },
-                { id: 3, title: 'event', location: "Chisinau", date: "date sample", time: "time" }
-                , { id: 4, title: 'event', location: "Chisinau", date: "date sample", time: "time" }]
+                { id: 3, title: 'event', location: "Chisinau", date: "date sample", time: "time" }, 
+                { id: 4, title: 'event', location: "Chisinau", date: "date sample", time: "time" }]
         }
     }
 }

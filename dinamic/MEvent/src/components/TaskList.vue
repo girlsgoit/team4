@@ -1,119 +1,61 @@
 <template>
-   <div>
-  <!-- <div class="calendar">
-    <div class="month">
-  <ul class="group-button">
-    <br>
-    <li class="m-month"> <h2>August</h2> </li>
-    <li class="prev"><button type="button" class="m-button"><span> &#10094;</span></button></li>
-    <li class="next"><button type="button" class="m-button"><span> &#10095;</span></button></li>
-    
-  </ul>
+   
+   <div class="container">
+            <div class="input-field">
+                <textarea placeholder="Enter your new task"></textarea>
+                <i class="uil uil-notes note-icon"></i>
+            </div>
+            <ul class="ToDoList">
 
-  <ul class="grp-button">
-    <br>
-    <br>
-    <li><span style="font-size:18px">2023</span></li>
-    <li class="prev"><button type="button" class="mobile-button"> &#10094;</button></li>
-    <li class="next-item"><button type="button" class="mobile-button">&#10095;</button></li>
-    
-    
-  </ul>
-</div>
+                <li class="List">
 
-<ul class="weekdays">
-  <li><span class="active">Mo</span></li>
-  <li><span class="active">Tu</span></li>
-  <li><span class="active">We</span></li>
-  <li><span class="active">Th</span></li>
-  <li><span class="active">Fr</span></li>
-  <li><span class="active">Sa</span></li>
-  <li><span class="active">Su</span></li>
-</ul>
+                    <input type="checkbox" />
+                    <span class="task">Play</span>
+                    <i class="uil uil-times"></i>
+                    <input type="date" class="date">
 
-<ul class="days">
-    <li><span class="active"></span></li>
-  <li><span class="active"><h4>1</h4></span></li>
-  <li><span class="active"><h4>2</h4></span></li>
-  <li><span class="active"><h4>3</h4></span></li>
-  <li><span class="active"><h4>4</h4></span></li>
-  <li><span class="active"><h4>5</h4></span></li>
-  <li><span class="active"><h4>6</h4></span></li>
-  <li><span class="active"><h4>7</h4></span></li>
-  <li><span class="active"><h4>8</h4></span></li>
-  <li><span class="active"><h4>9</h4></span></li>
-  <li><span class="active"><h4>10</h4></span></li>
-  <li><span class="active"><h4>11</h4></span></li>
-  <li><span class="active"><h4>12</h4></span></li>
-  <li><span class="active"><h4>13</h4></span></li>
-  <li><span class="active"><h4>14</h4></span></li>
-  <li><span class="active"><h4>15</h4></span></li>
-  <li><span class="active"><h4>16</h4></span></li>
-  <li><span class="active"><h4>17</h4></span></li>
-  <li><span class="active"><h4>18</h4></span></li>
-  <li><span class="active"><h4>19</h4></span></li>
-  <li><span class="active"><h4>20</h4></span></li>
-  <li><span class="active"><h4>21</h4></span></li>
-  <li><span class="active"><h4>22</h4></span></li>
-  <li><span class="active"><h4>23</h4></span></li>
-  <li><span class="active"><h4>24</h4></span></li>
-  <li><span class="active"><h4>25</h4></span></li>
-  <li><span class="active"><h4>26</h4></span></li>
-  <li><span class="active"><h4>27</h4></span></li>
-  <li><span class="active"><h4>28</h4></span></li>
-  <li><span class="active"><h4>29</h4></span></li>
-  <li><span class="active"><h4>30</h4></span></li>
-  <li><span class="active"><h4>31</h4></span></li>
-</ul>
-</div> -->
-<div class="container">
-    <div class="input-field">
-        <textarea placeholder="Enter your new task"></textarea>
-        <i class="uil uil-notes note-icon"></i>
-    </div>
-    <ul class="ToDoList">
-      
-        <li class="List">
-          
-            <input type="checkbox"/>
-            <span class="task">Play</span>
-            <i class="uil uil-times"></i>
-            <input type="date" class="date">
-            
 
-        </li>
-        <li class="List">
-            <input type="checkbox"/>
-            <span class="task">Work</span>
-            <i class="uil uil-times"></i>
-            <input type="date" class="date">
-        </li>
-    </ul>
-    <div class="pending-tasks">
-        <span> You have <span>no </span>tasks pending.</span>
-        <button class="clear-button">Clear All</button>
-    </div>
-   </div>
-   </div>
+                </li>
+                <li class="List">
+                    <input type="checkbox" />
+                    <span class="task">Work</span>
+                    <i class="uil uil-times"></i>
+                    <input type="date" class="date">
+                </li>
+            </ul>
+            <div class="pending-tasks">
+                <span> You have <span>no </span>tasks pending.</span>
+                <button class="clear-button">Clear All</button>
+            </div>
+        </div>
+  
+   
 </template>
 
 <script>
-    export default {
-        name: "TaskList",
-        data: function () {
-            return {
-                tasks: [{ id: 1  , title: 'event', date: "string date"}, 
-                { id: 2  , title: 'event', date: "string date"},
-                { id: 3  , title: 'event', date: "string date"},
-                { id: 4  , title: 'event', date: "string date"}
+
+import Calendar from '../components/Calendar.vue';
+export default {
+    name: "TaskList",
+    data: function () {
+        return {
+            tasks: [{ id: 1, title: 'event', date: "string date" },
+            { id: 2, title: 'event', date: "string date" },
+            { id: 3, title: 'event', date: "string date" },
+            { id: 4, title: 'event', date: "string date" }
             ]
-            }}}
+        }
+    },
+    components: {
+        Calendar
+    }
+}
 
 </script>
 
 <style scoped>
 ul {list-style-type: none;}
-body {
+.body {
     font-family: Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -387,4 +329,5 @@ textarea::-webkit-scrollbar {
 .clear-button:hover{
     background-color: #ffc7f98e;
 }
+
 </style>

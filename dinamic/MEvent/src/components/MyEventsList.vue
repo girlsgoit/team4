@@ -21,4 +21,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+</style>

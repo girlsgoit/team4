@@ -21,10 +21,8 @@
                             </div>
                         </div>
                         <div class="input-field">
-                            <!-- <button @click="register_b">Register -->
-                            <input type="submit" class="submit" value="Register">
+                            <router-link to="/"><input type="submit" class="submit" value="Register"></router-link>
                             <i class="bx bx-lock-alt"></i>
-                            <!-- </button> -->
                         </div>
                     </div>
                 </div>
@@ -60,8 +58,12 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Poppins:wght@300&display=swap');
 
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 
 .body {
     background: #80376A;

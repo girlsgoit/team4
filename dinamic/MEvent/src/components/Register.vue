@@ -42,6 +42,7 @@ export default {
             surname: "",
             email: "",
             password: "",
+            server: "",
         }
     },
     methods: {

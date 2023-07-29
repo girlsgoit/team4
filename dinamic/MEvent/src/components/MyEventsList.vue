@@ -47,6 +47,13 @@
             </ul>
             <i class="bx bx-lock"></i>
         </div>
+
+<ul class="ToDoList" v-for="event in events">
+<MyEventsItem :title="event.title" :id="event.id" :date="event.date" :hour="event.hour" :location="event.location"/>
+ </ul>
+
+
+
     </div>
 </template>
 

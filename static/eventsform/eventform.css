@@ -11,7 +11,7 @@
     position: relative;
     max-width: 480px;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 0px;
     padding: 25px;
     margin: 85px auto 0;
     background-color: rgb(228, 188, 224);
@@ -19,19 +19,17 @@
 }
 .container .input-field{
     position: relative;
-    height: 80px;
     width: 100%;
 }
 .input-field textarea{
-    height: 80%;
-    width: 100%;
-    font-size: 18px;
+    height: 70%;
+    width: 98%;
     font-weight: 400;
     outline: none;
-    border-radius: 8px;
-    padding: 18px 45px 18px 15px;
+    border-radius: 0;
     border: 1px solid rgb(91, 33, 87);
     resize: none;
+    background-color: ;
 }
 .input-field textarea:focus ~.note-icon{
     color: beige;}
@@ -50,7 +48,6 @@ textarea::-webkit-scrollbar {
     cursor: default;
 }
 .container .input-field{
-    margin-top: 20px;
    cursor: default;
 }
 .input-field .field{
@@ -60,7 +57,7 @@ textarea::-webkit-scrollbar {
     list-style: none;
     background-color: rgb(187, 135, 178);
     padding: 20px 15px;
-    border-radius: 8px;
+    border-radius: 0px;
     margin-top: 10px;
     cursor: default;
 }
@@ -68,7 +65,7 @@ textarea::-webkit-scrollbar {
     position: absolute;
     margin: 0px 30px 0px 0px;
     padding: 20px 15px;
-    border-radius: 8px;
+    border-radius: none;
     margin-top: 0px;
     margin-left: 225px;
     background-color: transparent;
@@ -78,7 +75,7 @@ textarea::-webkit-scrollbar {
 .ToDoList .List input{
     height: 16px;
     min-width: 16px;
-    accent-color: #bdb6b6;
+    accent-color: #d483d1;
     pointer-events: none;
 }
 .ToDoList .List .events{
@@ -96,9 +93,8 @@ textarea::-webkit-scrollbar {
     border: none;
     outline: none;
     border-radius: 15px;
-    color: #CDA0BC;
+    color: #ed72be;
     padding: o o o 10px;
-    background: rgba(255, 255, 255, 0.1)
 }
 .container .List:hover i{
     display: inline-flex;
@@ -136,7 +132,12 @@ label {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    margin: 5px 15px;
+    background-color: transparent;
+    border-color: transparent;
+    
+}
+input, ::placeholder{
+    background-color: transparent;
 }
 
 .submit{
@@ -168,6 +169,15 @@ label {
 }
 .clear-button:hover{
     background-color: rgb(136, 122, 136);
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(187, 135, 178);
+    padding: 20px 15px;
+    border-radius: 0px;
+    margin-top: 10px;
+    cursor: default;
 }
 .input{
     color: #5a4b5a;
@@ -187,9 +197,12 @@ label {
     
 
 }
-
+hr{
+    color: black;
+}
 .input-block{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 5px;
 }
+

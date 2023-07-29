@@ -1,71 +1,57 @@
 <template>
-        <div class="container">
-      <div class="input-field">
-        <textarea placeholder="Enter your new task"></textarea>
-        <i class="uil uil-notes note-icon"></i>
-      </div>
-      <div id="create-todo">
-        <div>
-          <label for="start">Deadline:  </label>
-          <input 
-            type="date"
-            id="start"
-            name="trip-start"
-            value="2023-01-01"
-            in="2023-01-01"
-            max="2024-12-31"
-            class="inputdate"
-          />
+    <div class="container">
+        <div class="input-field">
+            <textarea placeholder="Enter your new task"></textarea>
+            <i class="uil uil-notes note-icon"></i>
         </div>
-        <button class="clear-button2">Create</button>
+        <div id="create-todo">
+            <div>
+                <label for="start">Deadline: </label>
+                <input type="date" id="start" name="trip-start" value="2023-01-01" in="2023-01-01" max="2024-12-31"
+                    class="inputdate" />
+            </div>
+            <button class="clear-button2">Create</button>
         </div>
-      <ul class="ToDoList">
-        <!-- task item -->
-        <li class="List">
-          <input type="checkbox" />
-          <span class="task">Play</span>
-          <i class="uil uil-times"></i>
-          <input type="date" class="date" />
-        </li>
-        <!-- task item -->
-        <li class="List" v-for="item in items">
-            {{ this.item }}
-          <input type="checkbox" />
-          <span class="task">Work</span>
-          <i class="uil uil-times"></i>
-          <input type="date" class="date" />
-        </li>
-      </ul>
-      <div class="pending-tasks">
-        <span>You have <span>no </span>tasks pending.</span>
-        <button class="clear-button">Clear All</button>
-      </div>
+        <ul class="ToDoList" v-for="task in tasks">
+            <!-- task item -->
+            <TaskItem :title="task.title" :id="task.id" :data="task.date"/>
+       
+        </ul>
+        <div class="pending-tasks">
+            <span>You have <span>no </span>tasks pending.</span>
+            <button class="clear-button">Clear All</button>
+        </div>
     </div>
 </template>
 
 <script>
 
 import Calendar from '../components/Calendar.vue';
+import TaskItem from '../components/TaskItem.vue';
 export default {
     name: "TaskList",
     data: function () {
         return {
-            tasks: [{ id: 1, title: 'event', date: "string date" },
-            { id: 2, title: 'event', date: "string date" },
-            { id: 3, title: 'event', date: "string date" },
-            { id: 4, title: 'event', date: "string date" }
+            tasks: [{ id: 1, title: 'taskName', date: "2023-07-09" , completed: true},
+            { id: 2, title: 'hgfgs', date: "2022-03-19" ,completed: true},
+            { id: 3, title: 'taskName', date: "2023-04-09" ,completed: false},
+            { id: 4, title: 'taskName', date: "2023-08-29",completed: true }
             ]
         }
     },
     components: {
-        Calendar
+        Calendar,
+        TaskItem
     }
 }
 
 </script>
 
 <style scoped>
-ul {list-style-type: none;}
+ul {
+    list-style-type: none;
+}
+
 .body {
     font-family: Verdana, sans-serif;
     margin: 0;
@@ -79,83 +65,83 @@ ul {list-style-type: none;}
 
 .month {
     padding: 70px 25px;
-  background: #bd85b2;
-  text-align: center;
-  position: relative;
-  object-fit: cover;
-  border-radius: 40px 40px 0px 0px;
-  margin: 0px 50px;
+    background: #bd85b2;
+    text-align: center;
+    position: relative;
+    object-fit: cover;
+    border-radius: 40px 40px 0px 0px;
+    margin: 0px 50px;
 }
 
 
 .month ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .month ul li {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 
 .month .prev {
-  float: left;
-  padding-top: 10px;
+    float: left;
+    padding-top: 10px;
 }
 
 
 .month .next {
-  float: right;
-  padding-top: 10px;
+    float: right;
+    padding-top: 10px;
 }
 
 
 .weekdays {
-  margin: 0;
-  padding: 10px 0;
-  background-color:#ddd;
-  margin: 0px 50px 0px 50px;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+    margin: 0px 50px 0px 50px;
 }
 
 .weekdays li {
-  display: inline-block;
-  width: 13.6%;
-  color: #666 !important;
-  text-align: center;
-  font-family: Lora;
+    display: inline-block;
+    width: 13.6%;
+    color: #666 !important;
+    text-align: center;
+    font-family: Lora;
 }
 
 
 .days {
-  padding: 10px 0;
-  background: #eee;
-  background-size: cover;
-  margin: 0px 50px;
-  border-radius: 0px 0px 40px 40px;
-  
+    padding: 10px 0;
+    background: #eee;
+    background-size: cover;
+    margin: 0px 50px;
+    border-radius: 0px 0px 40px 40px;
+
 }
 
 .days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777;
-  font-family: Lora;
-  font-size: 17px;
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777;
+    font-family: Lora;
+    font-size: 17px;
 }
 
 
 .days li .active {
-  padding: 5px;
+    padding: 5px;
 }
 
-.days h4{
+.days h4 {
     cursor: pointer;
 }
 
@@ -166,57 +152,61 @@ ul {list-style-type: none;}
 }
 
 .m-button {
-  cursor: pointer;
+    cursor: pointer;
     border: medium none;
-  background-image: none; 
-  background: transparent;
-  float: left;
-  background-color: transparent;
-  color: white;
-  margin: -13px 150px;
-  font-size: 20px;
-  cursor: pointer;
+    background-image: none;
+    background: transparent;
+    float: left;
+    background-color: transparent;
+    color: white;
+    margin: -13px 150px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.next{
-    margin: -12px 5px; 
+.next {
+    margin: -12px 5px;
 }
+
 .mobile-button {
     border: medium none;
-  background-image: none; 
-  background: transparent;
-  float: left;
-  background-color: transparent;
-  color: white;
-  margin: -30px 217px;
-  font-size: 12px;
-  cursor: pointer;
+    background-image: none;
+    background: transparent;
+    float: left;
+    background-color: transparent;
+    color: white;
+    margin: -30px 217px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
-.next-item{
+.next-item {
     margin: -12px 135px;
 }
 
 
-.m-month{
+.m-month {
     font-family: Display;
     margin: -30px 200px;
 }
 
-.grp-button{
+.grp-button {
     font-family: Display;
 }
 
 
 
-*{  margin: 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.body{
+
+.body {
     background-color: rgb(255, 255, 255);
 }
+
 .container {
     position: relative;
     max-width: 480px;
@@ -227,12 +217,14 @@ ul {list-style-type: none;}
     background-color: #bd85b2;
     box-shadow: 0px 5px 10px #bd85b2;
 }
-.container .input-field{
+
+.container .input-field {
     position: relative;
     height: 60px;
     width: 100%;
 }
-.input-field textarea{
+
+.input-field textarea {
     height: 100%;
     width: 100%;
     font-size: 18px;
@@ -243,13 +235,16 @@ ul {list-style-type: none;}
     border: 1px solid #ffffff;
     resize: none;
 }
-.input-field textarea:focus ~.note-icon{
-    color: rgb(255, 255, 255);}
+
+.input-field textarea:focus~.note-icon {
+    color: rgb(255, 255, 255);
+}
 
 textarea::-webkit-scrollbar {
     display: none;
 }
-.input-field .note-icon{
+
+.input-field .note-icon {
     position: absolute;
     top: 50%;
     right: 15px;
@@ -258,10 +253,12 @@ textarea::-webkit-scrollbar {
     font-size: 24px;
     color: #4d4d4d;
 }
-.container .ToDoList{
+
+.container .ToDoList {
     margin-top: 20px;
 }
-.ToDoList .List{
+
+.ToDoList .List {
     position: relative;
     display: flex;
     align-items: center;
@@ -272,7 +269,8 @@ textarea::-webkit-scrollbar {
     margin-top: 10px;
     cursor: pointer;
 }
-.date{
+
+.date {
     position: absolute;
     margin: 0px 30px 0px 0px;
     padding: 20px 15px;
@@ -283,20 +281,24 @@ textarea::-webkit-scrollbar {
     border-color: transparent;
     color: #4e4d4d;
 }
-.ToDoList .List input{
+
+.ToDoList .List input {
     height: 16px;
     min-width: 16px;
     accent-color: #5a5a5a;
     pointer-events: visible;
 }
-.ToDoList .List .task{
+
+.ToDoList .List .task {
     margin: 0px 30px 0px 15px;
     word-break: break-all;
 }
-.List input:checked~.task{
+
+.List input:checked~.task {
     text-decoration: line-through;
 }
-.ToDoList .List i{
+
+.ToDoList .List i {
     position: absolute;
     top: 50%;
     right: 15px;
@@ -311,42 +313,49 @@ textarea::-webkit-scrollbar {
 
 
 
-.ToDoList .List:hover i{
+.ToDoList .List:hover i {
     display: inline-flex;
 }
-.ToDoList .List i:hover{
+
+.ToDoList .List i:hover {
     opacity: 1;
 }
-.container .pending-tasks{
+
+.container .pending-tasks {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 25px;
 }
-.pending-tasks span{
+
+.pending-tasks span {
     color: #555455;
-    
+
 }
-.pending-tasks .clear-button{
+
+.pending-tasks .clear-button {
     padding: 6px 12px;
     outline: none;
     border: none;
     background: rgb(254, 254, 254);
-    color:rgb(65, 65, 65);
+    color: rgb(65, 65, 65);
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
 }
-.clear-button:hover{
+
+.clear-button:hover {
     background-color: #ffc7f98e;
 }
-.body{
+
+.body {
     background-color: rgb(255, 255, 255);
 }
 
-ul{
-    margin:0;
+ul {
+    margin: 0;
 }
+
 .container {
     position: relative;
     max-width: 480px;
@@ -357,25 +366,28 @@ ul{
     background-color: #bd85b2;
     box-shadow: 0px 5px 10px #bd85b2;
 }
-.container .input-field{
+
+.container .input-field {
     position: relative;
     height: 60px;
     width: 100%;
 
 }
+
 label {
-   margin: 0.4rem 0;
+    margin: 0.4rem 0;
     display: inline-flex;
     font: 1rem 'Fira Sans', sans-serif;
     color: #5a4b5a;
 
 }
 
-input,label {
+input,
+label {
     margin: 0.4rem 0;
 }
 
-.input-field textarea{
+.input-field textarea {
     height: 100%;
     width: 100%;
     font-size: 18px;
@@ -386,13 +398,16 @@ input,label {
     border: 1px solid #ffffff;
     resize: none;
 }
-.input-field textarea:focus ~.note-icon{
-    color: rgb(255, 255, 255);}
+
+.input-field textarea:focus~.note-icon {
+    color: rgb(255, 255, 255);
+}
 
 textarea::-webkit-scrollbar {
     display: none;
 }
-.input-field .note-icon{
+
+.input-field .note-icon {
     position: absolute;
     top: 15%;
     right: 30px;
@@ -401,7 +416,8 @@ textarea::-webkit-scrollbar {
     font-size: 24px;
     color: #4d4d4d;
 }
-.ToDoList .List{
+
+.ToDoList .List {
     position: relative;
     display: flex;
     align-items: center;
@@ -412,21 +428,24 @@ textarea::-webkit-scrollbar {
     margin-top: 10px;
     cursor: default;
 }
+
 .clear-button2 {
     padding: 6px 12px;
     outline: none;
     border: none;
     background: honeydew;
-    color:rgb(98, 27, 100);
+    color: rgb(98, 27, 100);
     font-size: 15px;
     border-radius: 2px;
     cursor: pointer;
-    margin-top: 5px;  
+    margin-top: 5px;
 }
-.clear-button2:hover{
+
+.clear-button2:hover {
     background-color: rgb(182, 161, 182);
 }
-.date{
+
+.date {
     position: absolute;
     margin: 0px 30px 0px 0px;
     padding: 20px 15px;
@@ -437,20 +456,24 @@ textarea::-webkit-scrollbar {
     border-color: transparent;
     color: #4e4d4d;
 }
-.ToDoList .List input{
+
+.ToDoList .List input {
     height: 16px;
     min-width: 16px;
     accent-color: #5a5a5a;
     pointer-events: visible;
 }
-.ToDoList .List .task{
+
+.ToDoList .List .task {
     margin: 0px 30px 0px 15px;
     word-break: break-all;
 }
-.List input:checked~.task{
+
+.List input:checked~.task {
     text-decoration: line-through;
 }
-.ToDoList .List i{
+
+.ToDoList .List i {
     position: absolute;
     top: 50%;
     right: 15px;
@@ -462,39 +485,43 @@ textarea::-webkit-scrollbar {
     opacity: 0.6;
     display: none;
 }
-.ToDoList .List:hover i{
+
+.ToDoList .List:hover i {
     display: inline-flex;
 }
-.ToDoList .List i:hover{
+
+.ToDoList .List i:hover {
     opacity: 1;
 }
-.container .pending-tasks{
+
+.container .pending-tasks {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 25px;
 }
-.pending-tasks span{
+
+.pending-tasks span {
     color: #555455;
 }
-.pending-tasks .clear-button{
+
+.pending-tasks .clear-button {
     padding: 6px 12px;
     outline: none;
     border: none;
     background: rgb(254, 254, 254);
-    color:rgb(65, 65, 65);
+    color: rgb(65, 65, 65);
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
 }
-.clear-button:hover{
+
+.clear-button:hover {
     background-color: #ffc7f98e;
 }
 
-#create-todo{
+#create-todo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-</style>
+}</style>

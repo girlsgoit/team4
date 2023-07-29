@@ -12,7 +12,7 @@
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-field">
-                    <input type="password" class="input" placeholder="   Password" required>
+                    <input type="password" class="input" placeholder="   Password" required v-model="password">
                     <div class="bottom">
                         <div class="left">
                             <input type="checkbox" id="check">
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="input-field">
-                        <router-link to="/"><input type="submit" class="submit" value="Login"></router-link>
+                        <router-link to="/"><input type="submit" class="submit" value="Login" @click="login"></router-link>
                         <i class="bx bx-lock-alt"></i>
                     </div>
                     <div class="register-link">
@@ -44,6 +44,12 @@ export default {
         return {
             email: "",
             password: "",
+        }
+    },
+    methods: {
+        login: function () {
+            console.log(this.email, this.password)
+            
         }
     }
 

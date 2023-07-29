@@ -7,7 +7,7 @@
                         <header>Register</header>
                     </div>
                     <div class="input-field">
-                        <input type="text" class="input" placeholder="   Name" required v-model="name">
+                        <input  type="text" class="input" placeholder="   Name" required v-model="name">
                         <input type="text" class="input" placeholder="   Surname" required v-model="surname">
                         <input type="text" class="input" placeholder="   Email" required v-model="email">
                         <i class="bx bx-user"></i>
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="input-field">
-                            <router-link to="/"><input type="submit" class="submit" value="Register"></router-link>
+                            <router-link to="/"><input @click="register_b" type="submit" class="submit" value="Register"></router-link>
                             <i class="bx bx-lock-alt"></i>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ export default {
     },
     methods: {
         register_b: function () {
-
+            console.log(this.name, this.surname, this.password,this.email)
         }
     },
 

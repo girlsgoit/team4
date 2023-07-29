@@ -1,74 +1,68 @@
 <template>
     <div class="container">
         <div class="input-field">
-            <input type="newevent" class="events" placeholder="   Enter your new event" required>
+            <input type="newevent" class="events" placeholder="   Enter your new event" required v-model="name">
             <i class="uil uil-times"></i>
             <ul class="block">
                 <div class="input-field">
                     <li class="field">
-                        <input type="Location" class="input" placeholder="   Enter location" required>
+                        <input type="Location" class="input" placeholder="   Enter location" required v-model="location">
                         <i class="uil uil-times"></i>
                         <label for="start"></label>
-                        <input type="time" id="appt" name="appt">
-                        <input type="date" id="start" name="trip-start" value="2023-01-01" min="2023-01-01"
-                            max="2024-12-31">
+                        <input type="time" id="appt" name="appt" v-model="time">
+                        <input type="date" id="start" name="trip-start" min="2023-01-01"
+                            max="2024-12-31" v-model="date">
 
 
                     </li>
                 </div>
             </ul>
             <div class="input-field">
-                <input type="submit" class="submit" value="Create">
+                <input @click="createEvent" type="submit" class="submit" value="Create">
                 <i class="bx bx-lock"></i>
             </div>
             <div class="pending-events">
                 <span>You have <span>no </span>events pending.</span>
                 <button class="clear-button">Clear All</button>
             </div>
-            <ul class="input-block">
-                <input class="block" placeholder=" eventname" required disabled>
-                <input class="block" placeholder=" location" required disabled>
-                <!-- <label for="start"></label> -->
-                <input type="time" id="appt" name="appt" required disabled>
-                <input type="date" id="start" name="trip-start" value="2023-01-01" min="2023-01-01" max="2024-12-31"
-                    required disabled>
-                <input class="block" placeholder=" eventname" required disabled>
-                <input class="block" placeholder=" location" required disabled>
-                <!-- <label for="start"></label> -->
-                <input type="time" id="appt" name="appt" required disabled>
-                <input type="date" id="start" name="trip-start" value="2023-01-01" min="2023-01-01" max="2024-12-31"
-                    required disabled>
-                <input class="block" placeholder=" eventname" required disabled>
-                <input class="block" placeholder=" location" required disabled>
-                <!-- <label for="start"></label> -->
-                <input type="time" id="appt" name="appt" required disabled>
-                <input type="date" id="start" name="trip-start" value="2023-01-01" min="2023-01-01" max="2024-12-31"
+            <ul class="input-block" v-for="event in events">
+                <input class="block" :placeholder="event.title" required disabled>
+                <input class="block" :placeholder="event.location" required disabled>
+                <input type="time" id="appt" name="appt" :value="event.time" required disabled>
+                <input type="date" id="start" name="trip-start" :value="event.date" min="2023-01-01" max="2024-12-31"
                     required disabled>
             </ul>
             <i class="bx bx-lock"></i>
         </div>
-
-<!-- <ul class="ToDoList" v-for="event in events">
-<MyEventsItem :title="event.title" :id="event.id" :date="event.date" :hour="event.hour" :location="event.location"/>
- </ul> -->
-
-
-
     </div>
 </template>
 
 
 <script>
-export default {
+    import MyEventsItem from './MyEventsItem.vue'
+    export default {
     name: "MyEventsItem",
+    components:{
+        MyEventsItem
+    },
     data: function () {
         return {
 
             events: [
-                { id: 1, title: 'event', location: "Chisinau", date: "date sample", time: "time" },
-                { id: 2, title: 'event', location: "Chisinau", date: "date sample", time: "time" },
-                { id: 3, title: 'event', location: "Chisinau", date: "date sample", time: "time" }
-                , { id: 4, title: 'event', location: "Chisinau", date: "date sample", time: "time" }]
+                { id: 1, title: 'Wow', location: "Chisinau", date: "2023-08-01", time: "time" },
+                { id: 2, title: 'event', location: "Chisinau", date: "2023-07-30", time: "time" },
+                { id: 3, title: 'event', location: "Chisinau", date: "2023-08-27", time: "time" }
+                , { id: 4, title: 'event', location: "Chisinau", date: "2024-01-01", time: "time" }],
+            name: "",
+            location: "",
+            date: "",
+            time:""
+        }
+    },
+    methods: {
+        createEvent: function(){
+            let event = {title:this.name, date:this.date, time:this.time, location:this.location}
+            this.events.push(event)
         }
     }
 }

@@ -1,20 +1,22 @@
 <template>
     <div class="container">
         <div class="input-field">
-            <textarea placeholder="Enter your new task"></textarea>
+            <textarea placeholder="Enter your new task" v-model="name"></textarea>
+            <!--  -->
+            <!-- <input v-model="createTask.name" type="text"> -->
             <i class="uil uil-notes note-icon"></i>
         </div>
         <div id="create-todo">
             <div>
                 <label for="start">Deadline: </label>
-                <input type="date" id="start" name="trip-start" value="2023-01-01" in="2023-01-01" max="2024-12-31"
+                <input type="date" id="start" name="trip-start" in="2023-01-01" max="2024-12-31" v-model="deadline"
                     class="inputdate" />
             </div>
-            <button class="clear-button2" >Create</button>
+            <button class="clear-button2" @click="createTask">Create</button>
         </div>
-        <ul class="ToDoList" v-for="task in tasks">
+        <ul class="ToDoList">
             <!-- task item -->
-            <TaskItem :title="task.title" :id="task.id" :data="task.date"/>
+            <TaskItem v-for="task in tasks" :title="task.title" :id="task.id" :data="task.date" :completed="task.completed"/>
        
         </ul>
         <div class="pending-tasks">
@@ -36,12 +38,20 @@ export default {
             { id: 2, title: 'hgfgs', date: "2022-03-19" ,completed: true},
             { id: 3, title: 'taskName', date: "2023-04-09" ,completed: false},
             { id: 4, title: 'taskName', date: "2023-08-29",completed: true }
-            ]
+            ],
+            deadline: "",
+            name: ""
         }
     },
     components: {
         Calendar,
         TaskItem
+    },
+    methods: {
+        createTask: function(){
+            let task = {title:this.name, date:this.deadline, completed:false}
+            this.tasks.push(task)
+        }
     }
 }
 

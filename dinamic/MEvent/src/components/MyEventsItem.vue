@@ -1,21 +1,26 @@
 <template>
     <div>
-        <h2>hello</h2>
-    </div>
+    <input class="block" placeholder=" eventname" required disabled>
+    <input class="block" placeholder=" location" required disabled>
+    <!-- <label for="start"></label> -->
+    <input type="time" id="appt" name="appt" required disabled>
+    <input type="date" id="start" name="trip-start" value="2023-01-01" min="2023-01-01" max="2024-12-31"
+        required disabled>
+        </div>
 
 </template>
 
 
 <script>
      export default {
-        name: "MyEventsItem",
-        data: function () {
-            return {
-                titlu: "",
-                data: "",
-                hour: "",
-                locatia: "",
-            }}}
+        // name: "MyEventsItem",
+        props:{
+            title: String,
+            location: String,
+            date: String,
+            time:String
+        }
+    }
 
 </script>
 

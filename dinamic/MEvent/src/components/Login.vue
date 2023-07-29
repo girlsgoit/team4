@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="input-field">
-                        <router-link to="/"><input type="submit" class="submit" value="Login" @click="login"></router-link>
+                        <button type="submit" class="submit" @click="login">Login</button>
                         <i class="bx bx-lock-alt"></i>
                     </div>
                     <div class="register-link">
@@ -38,6 +38,8 @@
 <script>
 //trebuie buton login
 //linia 30 p trebuie sa faca link la 
+import axios from 'axios';
+import router from '../router';
 export default {
     name: "Login",
     data: function () {
@@ -47,12 +49,18 @@ export default {
         }
     },
     methods: {
-        login: function () {
-            console.log(this.email, this.password)
-            
-        }
+        login: async function () {
+            let json = {
+                email:this.email,
+                password:this.password
+            }
+                await axios.post('https://97c5-94-139-153-193.ngrok-free.app/users/login', JSON.stringify(json)).then(response => {
+                    router.push('/tasks')
+                }).catch(error => {
+                    console.log(error.message)
+                })
+    },
     }
-
 }
 
 

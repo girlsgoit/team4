@@ -47,28 +47,28 @@ export default {
     methods: {
         register_b: function () {
             console.log(this.name, this.surname, this.password,this.email)
-                axios.post('server', name).then(response => {
+                axios.post('https://97c5-94-139-153-193.ngrok-free.app/', json).then(response => {
                     
                     this.name()
                 }).catch(error => {
                     console.log(error.message)
                 })
 
-                axios.post('server', surname).then(response => {
+                axios.post('https://97c5-94-139-153-193.ngrok-free.app/', json).then(response => {
                     
-                    this.name()
+                    this.surname()
                 }).catch(error => {
                     console.log(error.message)
                 })
 
-                axios.post('server', email).then(response => {
+                axios.post('https://97c5-94-139-153-193.ngrok-free.app/', json).then(response => {
                     
                     this.email()
                 }).catch(error => {
                     console.log(error.message)
                 })
 
-                axios.post('server', this.password).then(response => {
+                axios.post('https://97c5-94-139-153-193.ngrok-free.app/', json).then(response => {
 
                     this.password()
                 }).catch(error => {

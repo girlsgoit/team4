@@ -1,8 +1,8 @@
 body
 {
  font-family:sans-serif;
- background: #cd9b8c;
  min-height: 100vh;
+ background-color: rgba(44, 8, 35, 0.516);
 }
 .center,.content
 {
@@ -10,14 +10,16 @@ body
  top:50%;
  left:50%;
  transform:translate(-50%,-50%);
+
 }
+
 .click-me
 {
  display:block;
  width:160px;
  height:50px;
  background: #e4cac2;
- box-shadow: -3px -3px 7px #fffdfdcc,3px 3px 5px rgba(94, 104, 121, 0.342);
+ box-shadow: -3px -3px 7px #8e7a7acc,3px 3px 5px rgba(94, 104, 121, 0.342);
  text-align:center;
  font-size:22px;
  line-height:50px;
@@ -29,7 +31,7 @@ body
 }
 .click-me:hover
 {
- color: #0a0d0e;
+ color: #3c3b3b;
 }
 .content
 {
@@ -105,4 +107,8 @@ button
  font-weight: 600;
  margin-bottom: 32px;
  display: flex;
+ cursor: pointer;
+}
+button:hover{
+ color: #3c3b3b;
 }

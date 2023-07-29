@@ -1,35 +1,46 @@
 <template>
-   
-   <div class="container">
-            <div class="input-field">
-                <textarea placeholder="Enter your new task"></textarea>
-                <i class="uil uil-notes note-icon"></i>
-            </div>
-            <ul class="ToDoList">
-
-                <li class="List">
-
-                    <input type="checkbox" />
-                    <span class="task">Play</span>
-                    <i class="uil uil-times"></i>
-                    <input type="date" class="date">
-
-
-                </li>
-                <li class="List">
-                    <input type="checkbox" />
-                    <span class="task">Work</span>
-                    <i class="uil uil-times"></i>
-                    <input type="date" class="date">
-                </li>
-            </ul>
-            <div class="pending-tasks">
-                <span> You have <span>no </span>tasks pending.</span>
-                <button class="clear-button">Clear All</button>
-            </div>
+        <div class="container">
+      <div class="input-field">
+        <textarea placeholder="Enter your new task"></textarea>
+        <i class="uil uil-notes note-icon"></i>
+      </div>
+      <div id="create-todo">
+        <div>
+          <label for="start">Deadline:  </label>
+          <input 
+            type="date"
+            id="start"
+            name="trip-start"
+            value="2023-01-01"
+            in="2023-01-01"
+            max="2024-12-31"
+            class="inputdate"
+          />
         </div>
-  
-   
+        <button class="clear-button2">Create</button>
+        </div>
+      <ul class="ToDoList">
+        <!-- task item -->
+        <li class="List">
+          <input type="checkbox" />
+          <span class="task">Play</span>
+          <i class="uil uil-times"></i>
+          <input type="date" class="date" />
+        </li>
+        <!-- task item -->
+        <li class="List" v-for="item in items">
+            {{ this.item }}
+          <input type="checkbox" />
+          <span class="task">Work</span>
+          <i class="uil uil-times"></i>
+          <input type="date" class="date" />
+        </li>
+      </ul>
+      <div class="pending-tasks">
+        <span>You have <span>no </span>tasks pending.</span>
+        <button class="clear-button">Clear All</button>
+      </div>
+    </div>
 </template>
 
 <script>
@@ -328,6 +339,162 @@ textarea::-webkit-scrollbar {
 }
 .clear-button:hover{
     background-color: #ffc7f98e;
+}
+.body{
+    background-color: rgb(255, 255, 255);
+}
+
+ul{
+    margin:0;
+}
+.container {
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 25px;
+    margin: -400px 50px 0px 940px;
+    background-color: #bd85b2;
+    box-shadow: 0px 5px 10px #bd85b2;
+}
+.container .input-field{
+    position: relative;
+    height: 60px;
+    width: 100%;
+
+}
+label {
+   margin: 0.4rem 0;
+    display: inline-flex;
+    font: 1rem 'Fira Sans', sans-serif;
+    color: #5a4b5a;
+
+}
+
+input,label {
+    margin: 0.4rem 0;
+}
+
+.input-field textarea{
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+    border-radius: 8px;
+    padding: 18px 45px 18px 15px;
+    border: 1px solid #ffffff;
+    resize: none;
+}
+.input-field textarea:focus ~.note-icon{
+    color: rgb(255, 255, 255);}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+.input-field .note-icon{
+    position: absolute;
+    top: 15%;
+    right: 30px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 24px;
+    color: #4d4d4d;
+}
+.ToDoList .List{
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: #D5DFEA;
+    padding: 20px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: default;
+}
+.clear-button2 {
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    background: honeydew;
+    color:rgb(98, 27, 100);
+    font-size: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 5px;  
+}
+.clear-button2:hover{
+    background-color: rgb(182, 161, 182);
+}
+.date{
+    position: absolute;
+    margin: 0px 30px 0px 0px;
+    padding: 20px 15px;
+    border-radius: 8px;
+    margin-top: 0px;
+    margin-left: 225px;
+    background-color: transparent;
+    border-color: transparent;
+    color: #4e4d4d;
+}
+.ToDoList .List input{
+    height: 16px;
+    min-width: 16px;
+    accent-color: #5a5a5a;
+    pointer-events: visible;
+}
+.ToDoList .List .task{
+    margin: 0px 30px 0px 15px;
+    word-break: break-all;
+}
+.List input:checked~.task{
+    text-decoration: line-through;
+}
+.ToDoList .List i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    padding: 5px;
+    color: rgb(58, 58, 59);
+    padding: 5px;
+    opacity: 0.6;
+    display: none;
+}
+.ToDoList .List:hover i{
+    display: inline-flex;
+}
+.ToDoList .List i:hover{
+    opacity: 1;
+}
+.container .pending-tasks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.pending-tasks span{
+    color: #555455;
+}
+.pending-tasks .clear-button{
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    background: rgb(254, 254, 254);
+    color:rgb(65, 65, 65);
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.clear-button:hover{
+    background-color: #ffc7f98e;
+}
+
+#create-todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 </style>

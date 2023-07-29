@@ -1,49 +1,57 @@
 <template>
     <div class="body">
         <header>
-        <div class="box">
-            <div class="container">
-                <div class="top-header">
-                    <header>Register</header>
-        </div>
-        <div class="input-field">
-            <input type="text" class="input" placeholder="   Name" required>
-            <input type="text" class="input" placeholder="   Surname" required>
-            <input type="text" class="input" placeholder="   Email" required>
-            <i class="bx bx-user"></i>
-        </div>
-        <div class="input-field">
-            <input type="password" class="input" placeholder="   Password" required>
-            <div class="bottom">
-                <div class="left">
-                    <input type="checkbox" id="check">
-                    <label for="check">Remember me</label>
+            <div class="box">
+                <div class="container">
+                    <div class="top-header">
+                        <header>Register</header>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" class="input" placeholder="   Name" required v-model="name">
+                        <input type="text" class="input" placeholder="   Surname" required v-model="surname">
+                        <input type="text" class="input" placeholder="   Email" required v-model="email">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="input" placeholder="   Password" required v-model="password">
+                        <div class="bottom">
+                            <div class="left">
+                                <input type="checkbox" id="check">
+                                <label for="check"> Remember me</label>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <!-- <button @click="register_b">Register -->
+                            <input type="submit" class="submit" value="Register">
+                            <i class="bx bx-lock-alt"></i>
+                        <!-- </button> -->
+                        </div>
+                    </div>
                 </div>
-        </div>
-        <div class="input-field">
-            <input type="submit" class="submit" value="Register">
-            <i class="bx bx-lock-alt"></i>
-        </div>
-    </div></div>
-</div>
-    </header>
+            </div>
+        </header>
     </div>
 </template>
 
 <script>
 //trebuie buton register
-    export default {
-        name: "Login",
-        data: function () {
-            return {
-                name: "",
-                surname: "",
-                email: "",
-                password: "",
-            }
+export default {
+    name: "Login",
+    data: function () {
+        return {
+            name: "",
+            surname: "",
+            email: "",
+            password: "",
         }
-
+    },
+    methods: {
+        register_b: function () {
+            
+        }
     }
+
+}
 
 </script>
 
@@ -53,7 +61,8 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
-.body{
+
+.body {
     background: #80376A;
 }
 

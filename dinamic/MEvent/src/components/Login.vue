@@ -8,7 +8,7 @@
                     <header>Login</header>
                 </div>
                 <div class="input-field">
-                    <input type="text" class="input" placeholder="   Email" required>
+                    <input type="text" class="input" placeholder="   Email" required v-model="email">
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-field">

@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <!--Coding by CodingLab | www.codinglabweb.com-->
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
-        <meta name="viewpoint" content="width-device-width, initiak-scale=1.0"/>
-        <title>MEvent | My tasks</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewpoint" content="width-device-width, initiak-scale=1.0" />
+    <title>MEvent | My tasks</title>
 
-        <!--CSS-->
-        <link rel="stylesheet" href="style.css"/>
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css" />
 
-        <!--Unicons CSS-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"/>
-    </head>
-    <body>
-       <div class="container">
-        <div class="input-field">
-            <textarea placeholder="Enter your new task"></textarea>
-            <i class="uil uil-notes note-icon"></i>
+    <!--Unicons CSS-->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-field">
+        <textarea placeholder="Enter your new task"></textarea>
+        <i class="uil uil-notes note-icon"></i>
+      </div>
+      <div id="create-todo">
+        <div>
+          <label for="start">Start date:</label>
+          <input 
+            type="date"
+            id="start"
+            name="trip-start"
+            value="2023-01-01"
+            in="2023-01-01"
+            max="2024-12-31"
+            class="inputdate"
+          />
         </div>
-        <ul class="ToDoList">
-            <li class="List">
-                <input type="checkbox"/>
-                <span class="task">Play</span>
-                <i class="uil uil-times"></i>
-                <input type="date" class="date">
-    
-            </li>
-            <li class="List">
-                <input type="checkbox"/>
-                <span class="task">Work</span>
-                <i class="uil uil-times"></i>
-                <input type="date" class="date">
-            </li>
-        </ul>
-        <div class="pending-tasks">
-            <span>You have <span>no </span>tasks pending.</span>
-            <button class="clear-button">Clear All</button>
+        <button class="clear-button2">Create</button>
         </div>
-       </div>
-    </body>
+      <ul class="ToDoList">
+        <li class="List">
+          <input type="checkbox" />
+          <span class="task">Play</span>
+          <i class="uil uil-times"></i>
+          <input type="date" class="date" />
+        </li>
+        <li class="List">
+          <input type="checkbox" />
+          <span class="task">Work</span>
+          <i class="uil uil-times"></i>
+          <input type="date" class="date" />
+        </li>
+      </ul>
+      <div class="pending-tasks">
+        <span>You have <span>no </span>tasks pending.</span>
+        <button class="clear-button">Clear All</button>
+      </div>
+    </div>
+  </body>
 </html>

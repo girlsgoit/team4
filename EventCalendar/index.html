@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Display&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&display=swap">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"/>
+</head>
+<body>
+  <div class="calendar">
+    <div class="month">
+  <ul class="group-button">
+    <br>
+    <li class="m-month"> <h2>August</h2> </li>
+    <li class="prev"><button type="button" class="m-button"><span> &#10094;</span></button></li>
+    <li class="next"><button type="button" class="m-button"><span> &#10095;</span></button></li>
+    
+  </ul>
+
+  <ul class="grp-button">
+    <br>
+    <br>
+    <li><span style="font-size:18px">2023</span></li>
+    <li class="prev"><button type="button" class="mobile-button"> &#10094;</button></li>
+    <li class="next-item"><button type="button" class="mobile-button">&#10095;</button></li>
+    
+    
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li><span class="active">Mo</span></li>
+  <li><span class="active">Tu</span></li>
+  <li><span class="active">We</span></li>
+  <li><span class="active">Th</span></li>
+  <li><span class="active">Fr</span></li>
+  <li><span class="active">Sa</span></li>
+  <li><span class="active">Su</span></li>
+</ul>
+
+<ul class="days">
+    <li><span class="active"></span></li>
+  <li><span class="active"><h4>1</h4></span></li>
+  <li><span class="active"><h4>2</h4></span></li>
+  <li><span class="active"><h4>3</h4></span></li>
+  <li><span class="active"><h4>4</h4></span></li>
+  <li><span class="active"><h4>5</h4></span></li>
+  <li><span class="active"><h4>6</h4></span></li>
+  <li><span class="active"><h4>7</h4></span></li>
+  <li><span class="active"><h4>8</h4></span></li>
+  <li><span class="active"><h4>9</h4></span></li>
+  <li><span class="active"><h4>10</h4></span></li>
+  <li><span class="active"><h4>11</h4></span></li>
+  <li><span class="active"><h4>12</h4></span></li>
+  <li><span class="active"><h4>13</h4></span></li>
+  <li><span class="active"><h4>14</h4></span></li>
+  <li><span class="active"><h4>15</h4></span></li>
+  <li><span class="active"><h4>16</h4></span></li>
+  <li><span class="active"><h4>17</h4></span></li>
+  <li><span class="active"><h4>18</h4></span></li>
+  <li><span class="active"><h4>19</h4></span></li>
+  <li><span class="active"><h4>20</h4></span></li>
+  <li><span class="active"><h4>21</h4></span></li>
+  <li><span class="active"><h4>22</h4></span></li>
+  <li><span class="active"><h4>23</h4></span></li>
+  <li><span class="active"><h4>24</h4></span></li>
+  <li><span class="active"><h4>25</h4></span></li>
+  <li><span class="active"><h4>26</h4></span></li>
+  <li><span class="active"><h4>27</h4></span></li>
+  <li><span class="active"><h4>28</h4></span></li>
+  <li><span class="active"><h4>29</h4></span></li>
+  <li><span class="active"><h4>30</h4></span></li>
+  <li><span class="active"><h4>31</h4></span></li>
+</ul>
+</div>
+
+
+<div class="container">
+    <div class="input-field">
+        <input type="newevent" class="events" placeholder="   Enter your new event" required>
+        <i class="uil uil-times"></i>
+    <ul class="block">
+        <div class="input-field">
+            <li class="field">
+                <input type="Location" class="input" placeholder="   Enter location" required>
+                <i class="uil uil-times"></i>
+                <label for="start"></label>
+                <input type="time" id="appt" name="appt">
+   <input type="date" id="start" name="trip-start"
+   value="2023-01-01"
+   min="2023-01-01" max="2024-12-31">
+   
+    
+            </li>
+    </ul>
+    <div class="input-field">
+        <input type="submit" class="submit"  value="Create">
+        <i class="bx bx-lock"></i>
+    </div>
+    <div class="pending-events">
+        <span>You have <span>no </span>events pending.</span>
+        <button class="clear-button">Clear All</button></div>
+        <ul class="input-block">
+                    <input class="block" placeholder=" eventname" required disabled>
+                    <input class="block" placeholder=" location" required disabled>
+                    <!-- <label for="start"></label> -->
+                    <input type="time" id="appt" name="appt" required disabled>
+                    <input type="date" id="start" name="trip-start"
+                     value="2023-01-01"
+                     min="2023-01-01" max="2024-12-31" required disabled>
+                     <input class="block" placeholder=" eventname" required disabled>
+                     <input class="block" placeholder=" location" required disabled>
+                     <!-- <label for="start"></label> -->
+                     <input type="time" id="appt" name="appt" required disabled>
+                     <input type="date" id="start" name="trip-start"
+                      value="2023-01-01"
+                      min="2023-01-01" max="2024-12-31" required disabled>
+                      <input class="block" placeholder=" eventname" required disabled>
+                      <input class="block" placeholder=" location" required disabled>
+                      <!-- <label for="start"></label> -->
+                      <input type="time" id="appt" name="appt" required disabled>
+                      <input type="date" id="start" name="trip-start"
+                       value="2023-01-01"
+                       min="2023-01-01" max="2024-12-31" required disabled>
+        </ul>
+    <i class="bx bx-lock"></i>
+</div>
+   </div>
+
+</body>
+</html>

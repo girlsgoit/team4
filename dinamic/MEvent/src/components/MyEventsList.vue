@@ -7,19 +7,9 @@
 
 <script>
 
-export default {
-name: "MyEventsList",
-data: function(){
-    return{
-        events: []
-    }
-},
 
 
 
-}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

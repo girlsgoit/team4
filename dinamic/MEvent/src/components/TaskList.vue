@@ -10,7 +10,7 @@
                 <input type="date" id="start" name="trip-start" value="2023-01-01" in="2023-01-01" max="2024-12-31"
                     class="inputdate" />
             </div>
-            <button class="clear-button2">Create</button>
+            <button class="clear-button2" >Create</button>
         </div>
         <ul class="ToDoList" v-for="task in tasks">
             <!-- task item -->
